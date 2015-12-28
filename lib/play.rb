@@ -30,4 +30,12 @@ def turn(board)
   display_board(board)
 end
 
+def play(board)
+  counter = 0
+  loop do
+    turn(board)
+    counter += 1
+    break if counter > 9
+  end
+end 
 # Define your play method below
