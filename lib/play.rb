@@ -38,3 +38,11 @@ def play(board)
     go += 1
   end
 end
+
+def play(board)
+  go = 1
+  while go < 10
+    turn(board)
+    go += 1
+  end
+end
