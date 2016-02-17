@@ -1,3 +1,8 @@
+def play(board)
+  9.times do turn(board)
+  end
+end
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -7,12 +12,12 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(board, location, current_player = "X")
-  board[location.to_i-1] = current_player
+def move(board, position, current_player = "X")
+  board[position.to_i-1] = current_player
 end
 
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+def position_taken?(board, position)
+  board[position] != " " && board[psition] != ""
 end
 
 def valid_move?(board, position)
@@ -21,9 +26,9 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
-  if valid_move?(board, input)
-    move(board, input)
+  position = gets.strip
+  if valid_move?(board, position)
+    move(board, position)
   else
     turn(board)
   end
