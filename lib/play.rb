@@ -31,3 +31,12 @@ def turn(board)
 end
 
 # Define your play method below
+
+def game_done?(board)
+end
+
+def play(board)
+  9.times do 
+    turn(board)
+  end
+end
