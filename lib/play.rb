@@ -31,3 +31,11 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  i = 0
+
+  while i < board.length
+    turn(board)
+    i += 1
+  end
+end
