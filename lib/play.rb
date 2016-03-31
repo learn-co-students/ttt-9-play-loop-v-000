@@ -31,3 +31,13 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  pick = 1
+  loop do
+    while pick == 9
+         pick += 1
+      turn(board)
+      break
+     end
+  end
+end
