@@ -1,4 +1,4 @@
-# Helper Methods
+p# Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -31,4 +31,10 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  intTurn = 0
+  until intTurn == 9
+    turn(board)
+    intTurn += 1
+  end
+end
