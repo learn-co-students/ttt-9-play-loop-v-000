@@ -35,4 +35,13 @@ def turn(board)
   end
 end
 
+def play(board)
+  counter = 0
+  while valid_move?(board, counter) do
+  turn(board)
+  counter += 1
+  end
+end
+
+
 # Define your play method below
