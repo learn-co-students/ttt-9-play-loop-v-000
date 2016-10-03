@@ -26,11 +26,12 @@ def valid_move?(board, index)
 end
 
 def turn(board)
+  binding.pry
   puts "Please enter 1-9:"
   input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    move(board, index)
+  index = input_to_index(input.to_i-1)
+  if valid_move?(board, index.to_i-1)
+    move(board, index.to_i-1)
     display_board(board)
   else
     turn(board)
@@ -38,7 +39,6 @@ def turn(board)
 end
 
 def play(board)
-binding.pry
   counter = 0
   while counter < 10
     counter += 1
