@@ -36,3 +36,11 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  turn_count = 0	# this variable will act as your base counter
+  while turn_count < 9		# stops the loop at 8
+    turn(board)
+    turn_count+=1		# increment up
+  end
+end
