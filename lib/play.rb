@@ -1,3 +1,13 @@
+# play method
+def play(board)
+  9.times do
+    turn(board)
+  end
+
+end
+
+
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
