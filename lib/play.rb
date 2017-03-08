@@ -1,9 +1,10 @@
 # play method
 def play(board)
-  9.times do
+  count = 0
+  until count == 9 do
     turn(board)
+    count += 1
   end
-
 end
 
 
