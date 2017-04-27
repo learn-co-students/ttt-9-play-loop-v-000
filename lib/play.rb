@@ -7,18 +7,22 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+#input_to_index
 def input_to_index(user_input)
   user_input.to_i - 1
 end
 
+#move
 def move(board, index, current_player = "X")
   board[index] = current_player
 end
 
+#position_taken
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
 
+#valid_move
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
@@ -36,3 +40,11 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+turn = 0
+while turn <= 8
+turn(board)
+  turn += 1
+end
+end
