@@ -31,8 +31,14 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
+    puts "Invalid move. Try again!"
     turn(board)
   end
 end
 
 # Define your play method below
+def play(board)
+9.times do
+  turn(board)
+end
+end
