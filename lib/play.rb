@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board) #define method
+  counter = 0 #total of 9 moves allowed
+  until counter == 9 #loop for while the count is less/eqaul 9, keep running turn method
+    turn(board)
+    counter += 1
+  end
+end
