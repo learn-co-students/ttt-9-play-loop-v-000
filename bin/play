@@ -7,4 +7,11 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
 
+play(board)
+# def play(board)
+#   until turn(board) == 9
+#     play(board) += 1
+#   end
+# end
+
 # Make sure to execute #play below
