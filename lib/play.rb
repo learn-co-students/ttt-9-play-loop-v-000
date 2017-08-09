@@ -12,7 +12,7 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
-  board[index] = current_player
+  board[index] = current_player #<helper method
 end
 
 def position_taken?(board, location)
@@ -20,7 +20,7 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
+  index.between?(0,8) && !position_taken?(board, index) #helper method
 end
 
 def turn(board)
@@ -36,3 +36,13 @@ def turn(board)
 end
 
 # Define your play method below
+# play method should accept board as argument
+# start a loop and call #turn
+def play(board)
+  turn_count = 1
+    until turn_count > 9 do
+      puts "Please enter 1-9:"
+      turn(board)
+      turn_count += 1
+    end
+  end
