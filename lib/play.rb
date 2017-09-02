@@ -36,3 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  # we should loop 9 'times'(hint) in order to have 9 turns
+  t = 0
+  while(t < 9)
+    turn(board)
+    t += 1
+  end
+  # 9.times do
+  #   turn(board)
+  # end
+end
