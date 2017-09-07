@@ -36,3 +36,12 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  counter = 0
+  while counter < 9 do
+    counter += 1
+    turn(board)
+    puts "counter is #{counter}"
+  end
+  puts "Game completed"
+end
