@@ -13,6 +13,7 @@ end
 
 def move(board, index, current_player = "X")
   board[index] = current_player
+  display_board(board)
 end
 
 def position_taken?(board, location)
@@ -29,10 +30,17 @@ def turn(board)
   index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index)
-    display_board(board)
   else
     turn(board)
   end
 end
 
 # Define your play method below
+
+def play(board)
+  gameRound = 0
+  until gameRound == 9
+    turn(board)
+    gameRound += 1
+  end
+end
