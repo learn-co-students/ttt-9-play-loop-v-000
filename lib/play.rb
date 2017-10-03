@@ -28,11 +28,17 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
-    display_board(board)
   else
     turn(board)
   end
+  move(board, index)
+  display_board(board)
 end
 
-# Define your play method below
+def play(board)
+  counter = 0
+    while counter <9
+        turn(board)
+        counter += 1
+      end
+    end
