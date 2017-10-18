@@ -25,14 +25,20 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
+  input = gets.strip.to_i
   index = input_to_index(input)
+
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
   else
+    puts "Invalid move, try again!"
     turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  for input in 1..9 do
+    turn(board)
+  end
+end
