@@ -35,12 +35,10 @@ def turn(board)
   end
 end
 
-def play(board)
+def play(board) #accepts board array as an argument
   counter = 0
   until counter == 9
-    turn(board)
+    turn(board)   #executes the turn method until counter = 9
     counter += 1
   end
 end
-
-  
