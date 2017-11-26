@@ -16,7 +16,7 @@ def move(board, index, current_player = "X")
 end
 
 def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+  board[location] != " " && board[location] != ""  #the elements on both sides of the && must return true, and the whole statement will evaluate to true
 end
 
 def valid_move?(board, index)
