@@ -48,3 +48,5 @@ end
 #BREAKTHRU
 #the count starts at zero, therefor, to execute 9 times, the count needs to stop
 # at 8. Remember the counter should set to one less than desired iterations.
+
+#could also start count at zero and go while counter < 9
