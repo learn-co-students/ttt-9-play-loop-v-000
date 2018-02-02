@@ -38,7 +38,18 @@ end
 # Define your play method below
 
 def play(board) 
+turn = 8
+counter = 0 
+loop do 
+  counter = counter + 1
+  turn(board)
+  if counter > turn 
+    puts "you only get #{turn} player"
+    break
 end 
+end 
+end 
+
 
 
 
