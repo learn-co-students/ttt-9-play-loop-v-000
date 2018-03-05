@@ -34,5 +34,13 @@ def turn(board)
     turn(board)
   end
 end
-
+board = Array.new(9, " ")
 # Define your play method below
+def play(board)
+  turns = 0
+  until turns == 9
+    turn(board)
+    turns += 1
+  end
+
+end
