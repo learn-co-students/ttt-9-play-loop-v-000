@@ -36,15 +36,3 @@ def turn(board)
 end
 
 # Define your play method below
-def play(board)
-  #turn(board)
-  counter = 0
-  until counter == 9
-    counter += 1
-  #while index < 10
-    turn(board)
-#  counter += 1
-display_board(board)
-#counter += 1
-end
-end
