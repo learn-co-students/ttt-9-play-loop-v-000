@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  tic_tac_count = 0
+	until tic_tac_count == 9
+		turn(board)
+	tic_tac_count += 1
+  end
+end
