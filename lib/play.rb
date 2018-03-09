@@ -1,4 +1,4 @@
-# Helper Methods
+# Helper Methods provided by FlatIron
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -15,14 +15,18 @@ def move(board, index, current_player = "X")
   board[index] = current_player
 end
 
+#How does this method deal with 'nil'?
+#This is a good example of the fact that you don't need 'true' or 'false' all the time.
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
 
+#This is another good example of the fact that you don't need 'true' or 'false' all the time.
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
+#Question here - what does it mean to say 'if valid_move(board, index)'?
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -36,3 +40,10 @@ def turn(board)
 end
 
 # Define your play method below
+#this method should call #turn 9 times, and then stop
+
+def play(board)
+    9.times do
+    turn(board)
+  end
+end
