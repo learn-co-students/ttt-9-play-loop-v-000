@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  num_turn = 1
+  while num_turn<10
+    turn(board)
+    num_turn += 1
+  end
+end
