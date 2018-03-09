@@ -35,4 +35,11 @@ def turn(board)
   end
 end
 
-# Define your play method below
+# Define the play method - loop 9 times to fill up the board
+def play (board)
+  count=1
+  while count<=9
+    turn(board)
+    count+=1
+  end
+end
