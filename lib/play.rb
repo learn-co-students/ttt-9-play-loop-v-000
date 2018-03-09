@@ -7,6 +7,15 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def play(board)
+  turn_value = 1
+  while turn_value <= 9
+    turn(board)
+    turn_value += 1
+  end
+end
+
+
 def input_to_index(user_input)
   user_input.to_i - 1
 end
