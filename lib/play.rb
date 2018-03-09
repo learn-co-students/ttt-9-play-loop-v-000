@@ -36,3 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  counter = 0
+  loop do
+    counter += 1
+    turn(board)
+    if counter == 9
+      puts "Perhaps your secret talent is losing Tic Tac Toe games against yourself."
+      break
+    end
+  end
+end
