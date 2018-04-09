@@ -23,6 +23,7 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
+#Utilized recursion.
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -35,4 +36,10 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  plays = 0
+  until plays == 9
+    turn(board)
+    plays += 1
+  end
+end
