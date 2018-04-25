@@ -69,10 +69,12 @@ def turn(board)
   else
     turn(board)
   end
+end
   
 def play(board)
   n = 0
     while n < 9
-    #turn
+    turn(board)
     n++
   end
+end
