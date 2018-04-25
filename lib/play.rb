@@ -75,6 +75,6 @@ def play(board)
   n = 0
     while n < 9
     turn(board)
-    n++
+    n+=1
   end
 end
