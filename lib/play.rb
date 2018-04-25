@@ -35,7 +35,6 @@ def turn(board)
   end
 end
 
-loop do
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -70,4 +69,10 @@ def turn(board)
   else
     turn(board)
   end
-end
+  
+def play(board)
+  n = 0
+    while n < 9
+    #turn
+    n++
+  end
