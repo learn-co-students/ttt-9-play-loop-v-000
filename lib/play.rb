@@ -36,3 +36,12 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turns = 0
+  
+    until turns == 9
+    turn(board)
+      puts "You only get #{turns} turns baby!"
+      turns += 1
+  end
+end
