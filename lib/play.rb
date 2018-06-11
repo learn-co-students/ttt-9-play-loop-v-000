@@ -35,4 +35,12 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+   number_turns = 1
+        while number_turns < 10
+        turn(board)
+        number_turns += 1
+      end
+    end
+  #start loop (while or until) and calling turn
+  #only allow 9 turns
