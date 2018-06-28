@@ -38,10 +38,15 @@ end
 # Define your play method below
 
 def play(board)
- loop do
-   turn
+ x = 0
+ 
+ while x < 9
+ 
+ x =+ 1
+ 
+ end
+  puts "X" 
 end
-
 
 
 
