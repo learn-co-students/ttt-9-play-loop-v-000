@@ -11,16 +11,6 @@ display_board(board)
 
 
 # Make sure to execute #play below
-turn(board)
-turn(board)
-turn(board)
-turn(board)
-turn(board)
-turn(board)
-turn(board)
-turn(board)
-turn(board)
-play(board)
 
-valid_move(board)
+
 play(board)
