@@ -35,14 +35,12 @@ def turn(board)
   end
 end
 
-# Define your play method below
-def play(board)
-end
+# Define your play method belowplay(board)
 
-def using_until
-    turn(board) = 6
-      until turn(board) == 10
-    	   puts "Wingardium Leviosa"
-          turn(board) += 1
-        end
- end
+def play(board)
+  counter = 0
+  until counter == 9
+    turn(board)
+    counter += 1
+  end
+end
