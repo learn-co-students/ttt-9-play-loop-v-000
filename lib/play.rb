@@ -38,9 +38,14 @@ end
 # Define your play method below
 
 def play(board)
-  until position_taken?(board,8) == true
-    turn(board)  
+    counter = 0
+    loop do
+      counter = counter + 1
+        turn(board)
+      if counter >= 9
+    break 
   end 
+end
 end 
 
 
