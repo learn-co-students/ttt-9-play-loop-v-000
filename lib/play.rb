@@ -37,18 +37,9 @@ end
 
 # Define your play method below
 def play(board)
-  input = gets.strip
-  input = 1
-     until input == 9
-     input += 1
-   turn(board)
-   if turn(board)
-   valid_move?(board, index)
-    move(board, index)
-    display_board(board)
-     else
-  play(board)
-  
-  end  
-end
+  input = 0
+     while input < 9
+      turn(board)
+        input += 1
+      end
 end
