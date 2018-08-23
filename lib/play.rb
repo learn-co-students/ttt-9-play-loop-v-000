@@ -36,3 +36,11 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  tr = 0 
+  while tr < 9 
+    turn(board)
+    tr += 1
+  end
+  puts "End of Game"
+end
