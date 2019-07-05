@@ -1,4 +1,4 @@
-# Helper Methods
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -7,8 +7,8 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def input_to_index(user_input)
-  user_input.to_i - 1
+def input_to_index(input)
+  input.to_i - 1
 end
 
 def move(board, index, current_player = "X")
@@ -28,38 +28,20 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player = "X")
     display_board(board)
   else
     turn(board)
   end
 end
 
-# Define your play method below
 def play(board)
-  
-  
   counter = 0
- 
-loop do 
-  counter += 1
-  turn(board)
-  if counter >= 9 
-    break
-  end
+  if counter == 9
+    counter += 1
+    turn(board)
+      else play(board)
+    end
 end
-    
-  
-end
-
-
-
-
-
-
-
-
-
-
 
 
