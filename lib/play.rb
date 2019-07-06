@@ -7,10 +7,6 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def input_to_index(user_input)
-  user_input.to_i - 1
-end
-
 def move(board, index, current_player = "X")
   board[index] = current_player
 end
@@ -25,14 +21,28 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    move(board, index)
+  user_entry = gets.strip.to_i - 1
+  
+  if
+    valid_move?(board,user_entry) == true 
+    move(board,user_entry)
     display_board(board)
   else
-    turn(board)
+      until valid_move?(board,user_entry) == true do
+       puts "That is not a valid move. Please enter 1-9:"
+        user_entry = gets.strip.to_i - 1
+      end
+      move(board,user_entry)
+      display_board(board)
   end
 end
 
 # Define your play method below
+def play(board)
+  counter = 1 
+
+  while counter <= 9 do
+    turn(board)
+    counter += 1
+    end
+end
