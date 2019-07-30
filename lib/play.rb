@@ -35,4 +35,8 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  while board.count(" ") > 0 do 
+    turn(board)
+  end
+end
