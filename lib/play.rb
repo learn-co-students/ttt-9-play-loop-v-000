@@ -15,8 +15,10 @@ def move(board, index, current_player = "X")
   board[index] = current_player
 end
 
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+def position_taken?(board, index)
+  board[index] != nil &&
+  board[index] != " " &&
+  board[index] != ""
 end
 
 def valid_move?(board, index)
@@ -36,3 +38,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turns = 0
+  while turns < 9
+    turn(board)
+    turns += 1
+  end
+end
