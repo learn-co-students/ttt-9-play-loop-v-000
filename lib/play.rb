@@ -31,8 +31,15 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
-    turn(board)
+    play(board)
   end
 end
 
 # Define your play method below
+
+def play(board)
+  until board == ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+   turn(board)
+  end
+  puts "The game is complete."
+end
