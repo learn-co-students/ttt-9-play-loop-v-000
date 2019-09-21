@@ -35,4 +35,11 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board) # board =  [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+# play is calling turn 9xs
+turn = 0
+while turn < 9
+  turn(board)
+  turn += 1
+end
+end
