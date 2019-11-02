@@ -33,6 +33,15 @@ def turn(board)
   else
     turn(board)
   end
+
 end
 
 # Define your play method below
+# Everyline in your program return something. work at one at a time.
+def play(board)
+  i = 0
+while i < 9
+  turn(board)
+   i += 1
+ end
+end
