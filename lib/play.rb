@@ -36,3 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  counter = 0
+  while counter < board.length
+    turn(board)
+    counter += 1
+  end
+end
+
+
+  #have the while/until loop continue to allow the game to play while there are still open spots remaiing by potentially calling the position_taken method but that it returns false, or use the counter loop construct to count until 9 selections and then declare the game over
+  # make sure we include an "game finished" puts statement to close off and complete the loop
