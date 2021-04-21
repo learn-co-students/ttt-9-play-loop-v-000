@@ -36,3 +36,12 @@ def turn(board)
 end
 
 # Define your play method below
+#calls turn
+#play method will initiate a loop that runs 9 times
+def play(board)
+  turns = 0
+  until turns == 9
+    turn(board)
+    turns += 1
+  end
+end
