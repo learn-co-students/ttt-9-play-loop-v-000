@@ -11,6 +11,7 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
+#def move(board, index, current_player)
 def move(board, index, current_player = "X")
   board[index] = current_player
 end
@@ -24,10 +25,13 @@ def valid_move?(board, index)
 end
 
 def turn(board)
+  #puts "Please enter x or o"
+  #current_player = gets.strip
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+    #move(board, index, current_player)
     move(board, index)
     display_board(board)
   else
@@ -36,3 +40,11 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  counter = 0
+  while counter.between?(0,8)
+    turn(board)
+    counter += 1
+  end
+end
