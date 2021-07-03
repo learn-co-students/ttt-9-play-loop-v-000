@@ -36,3 +36,22 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+m = 0
+until m == 9
+  turn(board)
+  m += 1
+  end
+end
+
+=begin  until
+    "#{board[0]}" == position_taken?(board,location) &&
+    "#{board[1]}" == position_taken?(board,location) &&
+    "#{board[2]}" == position_taken?(board,location) &&
+    "#{board[3]}" == position_taken?(board,location) &&
+    "#{board[4]}" == position_taken?(board,location) &&
+    "#{board[5]}" == position_taken?(board,location) &&
+    "#{board[6]}" == position_taken?(board,location) &&
+    "#{board[7]}" == position_taken?(board,location) &&
+    "#{board[8]}" == position_taken?(board,location)
+=end
