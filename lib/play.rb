@@ -36,3 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  counter = 0
+  # counter is a keywork and should be used with While and until
+  # needs to read until counter (operator) then number
+  # then call method
+  until counter == 9
+    turn(board)
+    counter += 1
+  end
+  end
