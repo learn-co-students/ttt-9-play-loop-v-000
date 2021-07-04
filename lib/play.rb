@@ -36,3 +36,18 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)  # Defines the method #play and passes 'board' as an argument.
+    x = 0
+    while x < 9
+      x += 1
+      turn(board)  #calls the turn method 9 times
+    end
+end
+
+
+
+# play = 0 #number of turns to play
+# while play < 9
+#   play +=1
+#   turn
+# end
