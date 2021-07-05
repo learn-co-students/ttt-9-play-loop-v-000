@@ -4,6 +4,6 @@ describe './bin/play' do
 
     expect(self).to receive(:play).with(kind_of(Array))
 
-    run_file("./bin/play")
+    run_file('./bin/play')
   end
 end
