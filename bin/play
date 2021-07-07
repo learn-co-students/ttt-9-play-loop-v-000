@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/play"
+# Make sure to execute #play belo
 
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
+board = [" "," "," "," "," "," "," "," "," "]
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
+#turn(board)
+play(board)
 
-# Make sure to execute #play below
+
