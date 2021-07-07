@@ -1,4 +1,32 @@
 # Helper Methods
+# the lab method
+#def play(board)
+#  until check_full(board) #== true
+#    turn(board)
+#    check_full(board)
+#  end
+#end
+
+#def check_full(board)
+#  count = 0
+#  until count==9
+#    count += 1
+#    if position_taken?(board, count)
+#      true
+#      break
+#    end
+#  end
+#end
+
+def play(board)
+  count = 0
+  until count == 9
+    count += 1
+    turn(board)
+  end
+end
+
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
