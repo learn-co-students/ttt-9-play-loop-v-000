@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  rounds = 0            #the count for the number of rounds starts at 0
+  until rounds == 9     #I used an until loop and set the number of rounds equal to 9 (for the 9 available slots)
+    turn(board)         #call #turn method until...the count reaches 9
+    rounds += 1         #this is the counter for rounds, increasing rounds by 1 each turn
+  end
+end
