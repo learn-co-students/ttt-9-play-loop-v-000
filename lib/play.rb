@@ -1,4 +1,13 @@
 # Helper Methods
+def play(board)
+  check = 0 #check if game is Over
+  i = 0 #counter for turns taken
+  while i < 9
+    turn(board)
+    i += 1
+  end
+end
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
