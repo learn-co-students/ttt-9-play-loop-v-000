@@ -26,6 +26,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
+  puts "You have enter #{input}."
   index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index)
@@ -35,4 +36,13 @@ def turn(board)
   end
 end
 
+
+
 # Define your play method below
+def play(board)
+  token = 0
+  while token < 9
+    turn(board)
+    token += 1
+  end
+end
