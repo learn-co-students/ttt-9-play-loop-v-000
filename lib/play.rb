@@ -28,7 +28,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index)    
     display_board(board)
   else
     turn(board)
@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board) 
+  i = 0 
+  while(i < 9)
+    turn(board)
+    i += 1
+  end
+end
