@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+$i = 9
+def play(board)
+  while $i > 0 do
+    turn(board)
+    $i -= 1
+  end
+end
