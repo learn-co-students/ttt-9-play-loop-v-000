@@ -31,8 +31,19 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
+     puts "That is an invalid entry!"
     turn(board)
   end
 end
 
 # Define your play method below
+def play(board) 
+  input = 0
+  puts "you only get x choices"
+  while input <= 8 
+  input += 1
+  turn(board)
+  
+  
+end
+end
