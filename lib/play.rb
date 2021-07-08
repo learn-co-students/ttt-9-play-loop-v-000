@@ -31,8 +31,15 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
+    puts "Not a valid move"
     turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  until board == ["X","X","X","X","X","X","X","X","X"]
+    puts "Play loop"
+    turn(board)
+    puts board.inspect
+  end
+end
