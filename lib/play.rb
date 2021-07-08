@@ -1,4 +1,6 @@
 # Helper Methods
+require 'pry'
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -20,7 +22,7 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
+  index.between?(0, 8) && !position_taken?(board, index)
 end
 
 def turn(board)
@@ -35,4 +37,10 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  counter = 0
+  while counter < 9
+    counter += 1
+    turn(board)
+  end
+end
