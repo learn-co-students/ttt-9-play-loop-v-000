@@ -35,4 +35,10 @@ def turn(board)
   end
 end
 
+def play(board)
+# play method should start a loop and call the turn(board)
+9.times do
+  turn(board)
+  end
+end
 # Define your play method below
